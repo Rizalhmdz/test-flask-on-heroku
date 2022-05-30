@@ -1,13 +1,13 @@
 #app/main.py
 
-from cProfile import label
-import re
+# from cProfile import label
+# import re
 from flask import Flask
-import tensorflow as tf
-import numpy as np
+# import tensorflow as tf
+# import numpy as np
 import pandas as pd
 import os
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 
 app = Flask(__name__)
 

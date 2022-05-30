@@ -1,3 +1,5 @@
 #requirements.txt
 gunicorn
 flask
+pandas
+os
