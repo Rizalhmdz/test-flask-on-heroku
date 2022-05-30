@@ -2,7 +2,7 @@
 
 # from cProfile import label
 # import re
-from flask import Flask
+from flask import Flask, redirect
 # import tensorflow as tf
 # import numpy as np
 import pandas as pd
@@ -17,7 +17,7 @@ from flask import Flask
 
 @app.route('/')
 def home():
-    return 'end point data sms : \"/api/sms/\"'
+    return redirect('/api/sms')
 
 @app.route('/api/sms',methods=['GET'])
 def predict():
@@ -26,7 +26,7 @@ def predict():
     path = 'data/dataset_sms_spam_v1.csv'
 
     dataframe = pd.read_csv( path , encoding='iso8859')
-    json = dataframe.to_json(orient='records')
+    json = dataframe.to_json(orient='index')
     
     # data_json = list()
 
