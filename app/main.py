@@ -6,14 +6,11 @@ from flask import Flask
 # import tensorflow as tf
 # import numpy as np
 import pandas as pd
-import os
 # from sklearn.model_selection import train_test_split
 
 app = Flask(__name__)
 
-from flask import Flask, request, jsonify
-from keras.preprocessing import text, sequence
-import pickle
+from flask import Flask
 
 # app = Flask(__name__)
 # model = pickle.load(open('verifIDNews_model.pkl','rb'))
@@ -26,7 +23,7 @@ def home():
 def predict():
     
     # user_input = [request.form.get('input')]
-    path = str(os.path.dirname(__file__)) + '\\..\\dataset_sms_spam_v1.csv'
+    path = 'dataset_sms_spam_v1.csv'
 
     dataframe = pd.read_csv( path , encoding='iso8859')
     json = dataframe.to_json(orient='records')
