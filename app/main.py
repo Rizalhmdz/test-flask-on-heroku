@@ -23,7 +23,7 @@ def home():
 def predict():
     
     # user_input = [request.form.get('input')]
-    path = 'dataset_sms_spam_v1.csv'
+    path = 'data/dataset_sms_spam_v1.csv'
 
     dataframe = pd.read_csv( path , encoding='iso8859')
     json = dataframe.to_json(orient='records')
